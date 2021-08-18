@@ -13,7 +13,7 @@ function App() {
 
   const [sushis, setSushis] = useState([])
   const [eaten, setEaten] = useState(false)
-  const [money, setMoney] = useState("100")
+  const [money, setMoney] = useState(100)
 
   useEffect(() => (
     fetch(API)
@@ -28,7 +28,7 @@ function App() {
   return (
     <div className="app">
       <SushiContainer sushis={sushis} eatSushi={eatSushi}/>
-      <Table mpney={money}/>
+      <Table money={money}/>
     </div>
   );
 }
